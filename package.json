@@ -1,0 +1,24 @@
+{
+  "name": "sdk-poc",
+  "version": "1.0.0",
+  "description": "Trying out webpack libraries",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiasFito/sdk-poc.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MatiasFito/sdk-poc/issues"
+  },
+  "homepage": "https://github.com/MatiasFito/sdk-poc#readme",
+  "devDependencies": {
+    "lodash": "^4.17.15",
+    "webpack": "^4.41.2"
+  }
+}
