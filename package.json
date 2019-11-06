@@ -19,6 +19,7 @@
   "homepage": "https://github.com/MatiasFito/sdk-poc#readme",
   "devDependencies": {
     "lodash": "^4.17.15",
-    "webpack": "^4.41.2"
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
