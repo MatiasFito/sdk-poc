@@ -1,11 +1,10 @@
   const path = require('path');
 
-  const serverConfig = {
-    target: 'node',
+  const config = {
     entry: './src/index.js',
     output: {
       path: path.resolve(__dirname, 'dist'),
-      filename: 'webpack-numbers-node.js',
+      filename: 'webpack-numbers.js',
       library: 'webpackNumbers',
       libraryTarget: 'umd'
     },
@@ -19,23 +18,4 @@
     }
   };
 
-  const webConfig = {
-    target: 'web',
-    entry: './src/index.js',
-    output: {
-      path: path.resolve(__dirname, 'dist'),
-      filename: 'webpack-numbers-web.js',
-      library: 'webpackNumbers',
-      libraryTarget: 'var'
-    },
-    externals: {
-      lodash: {
-        commonjs: 'lodash',
-        commonjs2: 'lodash',
-        amd: 'lodash',
-        root: '_'
-      }
-    }
-  };
-
-  module.exports = [ serverConfig, webConfig ];
+  module.exports = config;
