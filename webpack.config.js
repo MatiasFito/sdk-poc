@@ -1,6 +1,24 @@
   const path = require('path');
 
-  const config = {
+  const reactConfig = {
+    mode: 'development',
+    module: {
+      rules: [
+        {
+          test: /\.(js|jsx)$/,
+          include: [
+            path.resolve(__dirname, "webapp")
+          ],
+          exclude: /node_modules/,
+          use: {
+            loader: "babel-loader"
+          }
+        }
+      ]
+    }
+  }
+
+  const libraryConfig = {
     mode: 'development',
     entry: './src/index.js',
     output: {
@@ -20,4 +38,4 @@
     }
   };
 
-  module.exports = config;
+  module.exports = [libraryConfig, reactConfig];
