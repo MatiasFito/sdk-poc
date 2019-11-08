@@ -1,10 +1,12 @@
   const path = require('path');
 
   const config = {
+    mode: 'development',
     entry: './src/index.js',
     output: {
       path: path.resolve(__dirname, 'dist'),
       filename: 'webpack-numbers.js',
+      globalObject: 'typeof self !== \'undefined\' ? self : this',
       library: 'webpackNumbers',
       libraryTarget: 'umd'
     },
