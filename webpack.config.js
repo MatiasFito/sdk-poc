@@ -1,7 +1,9 @@
   const path = require('path');
+  const HtmlWebPackPlugin = require("html-webpack-plugin");
 
   const reactConfig = {
     mode: 'development',
+    entry: path.resolve(__dirname, 'webapp/index.js'),
     module: {
       rules: [
         {
@@ -13,9 +15,26 @@
           use: {
             loader: "babel-loader"
           }
+        },
+        {
+          test: /\.html$/,
+          include: [
+            path.resolve(__dirname, "webapp")
+          ],
+          use: [
+            {
+              loader: "html-loader"
+            }
+          ]
         }
       ]
-    }
+    },
+    plugins: [
+      new HtmlWebPackPlugin({
+        template: "./webapp/index.html",
+        filename: "./index.html"
+      })
+    ]
   }
 
   const libraryConfig = {

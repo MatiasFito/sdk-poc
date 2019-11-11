@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>SDK POC</title>
+  </head>
+  <body>
+    <div id="test">
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.core.js" integrity="sha256-tsIbwIT+4qFYQl3lJqYOZst6ot+JaR73T5eusuTukXM=" crossorigin="anonymous"></script>
+    <script src="webpack-numbers.js"></script>
+    <script>
+      // This works as expected!
+      var numberTwo = webpackNumbers.numToWord(2);
+
+      document.getElementById('test').textContent = numberTwo;
+    </script>
+  </body>
+</html>
