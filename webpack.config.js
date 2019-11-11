@@ -1,47 +1,10 @@
   const path = require('path');
-  const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-  const reactConfig = {
-    mode: 'development',
-    entry: path.resolve(__dirname, 'webapp/index.js'),
-    module: {
-      rules: [
-        {
-          test: /\.(js|jsx)$/,
-          include: [
-            path.resolve(__dirname, "webapp")
-          ],
-          exclude: /node_modules/,
-          use: {
-            loader: "babel-loader"
-          }
-        },
-        {
-          test: /\.html$/,
-          include: [
-            path.resolve(__dirname, "webapp")
-          ],
-          use: [
-            {
-              loader: "html-loader"
-            }
-          ]
-        }
-      ]
-    },
-    plugins: [
-      new HtmlWebPackPlugin({
-        template: "./webapp/index.html",
-        filename: "./index.html"
-      })
-    ]
-  }
-
-  const libraryConfig = {
+  const config = {
     mode: 'development',
     entry: './src/index.js',
     output: {
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'demo/library'),
       filename: 'webpack-numbers.js',
       globalObject: 'typeof self !== \'undefined\' ? self : this',
       library: 'webpackNumbers',
@@ -57,4 +20,4 @@
     }
   };
 
-  module.exports = [libraryConfig, reactConfig];
+  module.exports = config;

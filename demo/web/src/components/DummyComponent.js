@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from 'react-dom';
-import webpackNumbers from '../libs/webpack-numbers';
+import webpackNumbers from '../../../library/webpack-numbers';
 
 const DummyComponent = () => {
-  const test = webpackNumbers.numToWord(3);
+  const test = `Using library on the frontend to get text for number 3: ${webpackNumbers.numToWord(3)}`;
 
   return (
     <div>

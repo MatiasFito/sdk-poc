@@ -4,7 +4,9 @@
   "description": "Trying out webpack libraries",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build-library": "webpack",
+    "build-demo": "webpack --config ./demo/demo.webpack.js",
+    "start": "node ./demo/node/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
