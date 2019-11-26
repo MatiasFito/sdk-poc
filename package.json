@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build-library": "webpack",
+    "build-library-prod": "webpack --mode=production",
     "build-demo": "webpack --config ./demo/demo.webpack.js",
     "start": "node ./demo/node/app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
