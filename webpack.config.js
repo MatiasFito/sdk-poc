@@ -1,4 +1,5 @@
   const path = require('path');
+  const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
   const config = {
     mode: 'development',
@@ -22,6 +23,17 @@
             loader: "babel-loader"
           }
         }
+      ]
+    },
+    optimization: {
+      minimizer: [
+        new UglifyJsPlugin({
+          uglifyOptions: {
+            output: {
+              comments: true
+            }
+          }
+        })
       ]
     },
     externals: {

@@ -1,134 +1,87 @@
-(function webpackUniversalModuleDefinition(root, factory) {
-	if(typeof exports === 'object' && typeof module === 'object')
-		module.exports = factory(require("lodash"));
-	else if(typeof define === 'function' && define.amd)
-		define(["lodash"], factory);
-	else if(typeof exports === 'object')
-		exports["webpackNumbers"] = factory(require("lodash"));
-	else
-		root["webpackNumbers"] = factory(root["_"]);
-})(typeof self !== 'undefined' ? self : this, function(__WEBPACK_EXTERNAL_MODULE_lodash__) {
-return /******/ (function(modules) { // webpackBootstrap
-/******/ 	// The module cache
-/******/ 	var installedModules = {};
-/******/
-/******/ 	// The require function
-/******/ 	function __webpack_require__(moduleId) {
-/******/
-/******/ 		// Check if module is in cache
-/******/ 		if(installedModules[moduleId]) {
-/******/ 			return installedModules[moduleId].exports;
-/******/ 		}
-/******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = installedModules[moduleId] = {
-/******/ 			i: moduleId,
-/******/ 			l: false,
-/******/ 			exports: {}
-/******/ 		};
-/******/
-/******/ 		// Execute the module function
-/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
-/******/
-/******/ 		// Flag the module as loaded
-/******/ 		module.l = true;
-/******/
-/******/ 		// Return the exports of the module
-/******/ 		return module.exports;
-/******/ 	}
+!function(e,r){"object"==typeof exports&&"object"==typeof module?module.exports=r(require("lodash")):"function"==typeof define&&define.amd?define(["lodash"],r):"object"==typeof exports?exports.webpackNumbers=r(require("lodash")):e.webpackNumbers=r(e._)}("undefined"!=typeof self?self:this,function(n){/******/
+return u={},
 /******/
 /******/
-/******/ 	// expose the modules object (__webpack_modules__)
-/******/ 	__webpack_require__.m = modules;
+/******/ // expose the modules object (__webpack_modules__)
+/******/t.m=o=[
+/* 0 */
+/***/function(e,r,n){var o=n(1),t=n(2),u={numToWord:function(n){return o.reduce(t,function(e,r){return r.num===n?r.word:e},"")},wordToNum:function(n){return o.reduce(t,function(e,r){return r.word===n&&n.toLowerCase()?r.num:e},-1)}};e.exports=u},
+/* 1 */
+/***/function(e,r){e.exports=n;
+/***/},
+/* 2 */
+/***/function(e){e.exports=JSON.parse('[{"num":1,"word":"One"},{"num":2,"word":"Two"},{"num":3,"word":"Three"},{"num":4,"word":"Four"},{"num":5,"word":"Five"},{"num":0,"word":"Zero"}]');
+/***/}
+/******/],
 /******/
-/******/ 	// expose the module cache
-/******/ 	__webpack_require__.c = installedModules;
+/******/ // expose the module cache
+/******/t.c=u,
 /******/
-/******/ 	// define getter function for harmony exports
-/******/ 	__webpack_require__.d = function(exports, name, getter) {
-/******/ 		if(!__webpack_require__.o(exports, name)) {
-/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
-/******/ 		}
-/******/ 	};
+/******/ // define getter function for harmony exports
+/******/t.d=function(e,r,n){
+/******/t.o(e,r)||
+/******/Object.defineProperty(e,r,{enumerable:!0,get:n})
+/******/},
 /******/
-/******/ 	// define __esModule on exports
-/******/ 	__webpack_require__.r = function(exports) {
-/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
-/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
-/******/ 		}
-/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
-/******/ 	};
+/******/ // define __esModule on exports
+/******/t.r=function(e){
+/******/"undefined"!=typeof Symbol&&Symbol.toStringTag&&
+/******/Object.defineProperty(e,Symbol.toStringTag,{value:"Module"})
+/******/,Object.defineProperty(e,"__esModule",{value:!0})},
 /******/
-/******/ 	// create a fake namespace object
-/******/ 	// mode & 1: value is a module id, require it
-/******/ 	// mode & 2: merge all properties of value into the ns
-/******/ 	// mode & 4: return value when already ns object
-/******/ 	// mode & 8|1: behave like require
-/******/ 	__webpack_require__.t = function(value, mode) {
-/******/ 		if(mode & 1) value = __webpack_require__(value);
-/******/ 		if(mode & 8) return value;
-/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
-/******/ 		var ns = Object.create(null);
-/******/ 		__webpack_require__.r(ns);
-/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
-/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
-/******/ 		return ns;
-/******/ 	};
+/******/ // create a fake namespace object
+/******/ // mode & 1: value is a module id, require it
+/******/ // mode & 2: merge all properties of value into the ns
+/******/ // mode & 4: return value when already ns object
+/******/ // mode & 8|1: behave like require
+/******/t.t=function(r,e){
+/******/if(
+/******/1&e&&(r=t(r)),8&e)return r;
+/******/if(4&e&&"object"==typeof r&&r&&r.__esModule)return r;
+/******/var n=Object.create(null);
 /******/
-/******/ 	// getDefaultExport function for compatibility with non-harmony modules
-/******/ 	__webpack_require__.n = function(module) {
-/******/ 		var getter = module && module.__esModule ?
-/******/ 			function getDefault() { return module['default']; } :
-/******/ 			function getModuleExports() { return module; };
-/******/ 		__webpack_require__.d(getter, 'a', getter);
-/******/ 		return getter;
-/******/ 	};
+/******/if(t.r(n),
+/******/Object.defineProperty(n,"default",{enumerable:!0,value:r}),2&e&&"string"!=typeof r)for(var o in r)t.d(n,o,function(e){return r[e]}.bind(null,o));
+/******/return n;
+/******/},
 /******/
-/******/ 	// Object.prototype.hasOwnProperty.call
-/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/ // getDefaultExport function for compatibility with non-harmony modules
+/******/t.n=function(e){
+/******/var r=e&&e.__esModule?
+/******/function(){return e.default}:
+/******/function(){return e};
 /******/
-/******/ 	// __webpack_public_path__
-/******/ 	__webpack_require__.p = "";
+/******/return t.d(r,"a",r),r;
+/******/},
+/******/
+/******/ // Object.prototype.hasOwnProperty.call
+/******/t.o=function(e,r){return Object.prototype.hasOwnProperty.call(e,r)},
+/******/
+/******/ // __webpack_public_path__
+/******/t.p="",t(t.s=0);
+/******/
+/******/ // The require function
+/******/function t(e){
+/******/
+/******/ // Check if module is in cache
+/******/if(u[e])
+/******/return u[e].exports;
+/******/
+/******/ // Create a new module (and put it into the cache)
+/******/var r=u[e]={
+/******/i:e,
+/******/l:!1,
+/******/exports:{}
+/******/};
+/******/
+/******/ // Execute the module function
 /******/
 /******/
-/******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = "./src/index.js");
-/******/ })
+/******/ // Return the exports of the module
+/******/return o[e].call(r.exports,r,r.exports,t),
+/******/
+/******/ // Flag the module as loaded
+/******/r.l=!0,r.exports;
+/******/}var o,u;
 /************************************************************************/
-/******/ ({
-
-/***/ "./src/index.js":
-/*!**********************!*\
-  !*** ./src/index.js ***!
-  \**********************/
-/*! exports provided: numToWord, wordToNum, default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"numToWord\", function() { return numToWord; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"wordToNum\", function() { return wordToNum; });\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash */ \"lodash\");\n/* harmony import */ var lodash__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(lodash__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ref_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ref.json */ \"./src/ref.json\");\nvar _ref_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! ./ref.json */ \"./src/ref.json\", 1);\n\n\nvar numToWord = function numToWord(num) {\n  return lodash__WEBPACK_IMPORTED_MODULE_0___default.a.reduce(_ref_json__WEBPACK_IMPORTED_MODULE_1__, function (accum, ref) {\n    return ref.num === num ? ref.word : accum;\n  }, '');\n};\nvar wordToNum = function wordToNum(word) {\n  return lodash__WEBPACK_IMPORTED_MODULE_0___default.a.reduce(_ref_json__WEBPACK_IMPORTED_MODULE_1__, function (accum, ref) {\n    return ref.word === word && word.toLowerCase() ? ref.num : accum;\n  }, -1);\n};\n/**\n * Numbers module\n * @module WebpackNumbers\n */\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({\n  /**\n  * Convert a number to it's string equivalent.\n  * @param {number} num - The number in integer format.\n  * @return {string} The string corresponding the number.\n  */\n  numToWord: numToWord,\n\n  /**\n   * Convert a string to it's number equivalent.\n   * @param {string} word - The string of a number.\n   * @return {number} The number in integer format.\n   */\n  wordToNum: wordToNum\n});\n\n//# sourceURL=webpack://webpackNumbers/./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/ref.json":
-/*!**********************!*\
-  !*** ./src/ref.json ***!
-  \**********************/
-/*! exports provided: 0, 1, 2, 3, 4, 5, default */
-/***/ (function(module) {
-
-eval("module.exports = JSON.parse(\"[{\\\"num\\\":1,\\\"word\\\":\\\"One\\\"},{\\\"num\\\":2,\\\"word\\\":\\\"Two\\\"},{\\\"num\\\":3,\\\"word\\\":\\\"Three\\\"},{\\\"num\\\":4,\\\"word\\\":\\\"Four\\\"},{\\\"num\\\":5,\\\"word\\\":\\\"Five\\\"},{\\\"num\\\":0,\\\"word\\\":\\\"Zero\\\"}]\");\n\n//# sourceURL=webpack://webpackNumbers/./src/ref.json?");
-
-/***/ }),
-
-/***/ "lodash":
-/*!*************************************************************************************!*\
-  !*** external {"commonjs":"lodash","commonjs2":"lodash","amd":"lodash","root":"_"} ***!
-  \*************************************************************************************/
-/*! no static exports found */
-/***/ (function(module, exports) {
-
-eval("module.exports = __WEBPACK_EXTERNAL_MODULE_lodash__;\n\n//# sourceURL=webpack://webpackNumbers/external_%7B%22commonjs%22:%22lodash%22,%22commonjs2%22:%22lodash%22,%22amd%22:%22lodash%22,%22root%22:%22_%22%7D?");
-
-/***/ })
-
-/******/ });
-});
+/******/});
